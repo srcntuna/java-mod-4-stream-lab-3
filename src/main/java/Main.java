@@ -1,9 +1,13 @@
 import java.util.Scanner;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 
 public class Main {
     public static int sumOfDivisors(int start, int end, int a, int b) {
         // your code here
-        return 0;
+        return IntStream.rangeClosed(start,end).filter(x -> (x % a == 0) || (x % b == 0) ).sum();
+
+
     }
 
     public static void main(String[] args) {
